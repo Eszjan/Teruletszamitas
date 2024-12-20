@@ -1,0 +1,30 @@
+# mintaprogram
+import math
+
+def negyzet_terulet(laptavolsag):
+    """Szabályos négyszög (négyzet) területének számítása."""
+    return laptavolsag ** 2
+
+def hatszog_terulet(laptavolsag):
+    """Szabályos hatszög területének számítása."""
+    oldalhossz = laptavolsag / math.sqrt(3)  
+    return (3 * math.sqrt(3) / 2) * oldalhossz ** 2
+
+
+def main():
+    print("Szabályos négyszög, hatszög és nyolcszög területszámítása laptávolság alapján.")
+    
+    # Felhasználói bemenet
+    laptavolsag = float(input("Add meg a két szemben lévő oldal közötti távolságot (laptávolság): "))
+
+    # Területek kiszámítása
+    negyzet = negyzet_terulet(laptavolsag)
+    hatszog = hatszog_terulet(laptavolsag)
+  
+
+    # Eredmények kiírása
+    print(f"\nNégyzet területe: {negyzet:.2f}")
+    print(f"Hatszög területe: {hatszog:.2f}")
+
+if __name__ == "__main__":
+    main()
